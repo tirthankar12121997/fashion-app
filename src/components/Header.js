@@ -13,9 +13,10 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Header = (props) => {
+  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -28,10 +29,10 @@ const Header = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink><Link to="/ui/home">Home</Link></NavLink>
+              <NavLink href="#" onClick={() => history.push('/ui/home')}>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink><Link to="/ui/shop">Shop</Link></NavLink>
+              <NavLink href="#" onClick={() => history.push('/ui/shop')}>Shop</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -51,6 +52,7 @@ const Header = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
+          hello
           <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>

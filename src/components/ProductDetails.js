@@ -136,7 +136,7 @@ function ProductDetails({ productInfo }) {
                     <br />
                     <div>
                         {itemInCart ? (
-                            <Button onClick={() => history.push('/ui/bag')} color="success">Go To Bag</Button>
+                            <Button onClick={() => history.push('/ui/cart')} color="success">Go To Bag</Button>
                         ) : (
                             <Button onClick={handleAddToCartClick} color="primary">Add to Bag</Button>
                         )}

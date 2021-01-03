@@ -34,16 +34,12 @@ function ProductView() {
     });
     return (
         <div>
-            <Jumbotron>
-                <Container fluid>
-                    <Breadcrumb>
-                        <BreadcrumbItem><Link to="/ui/home">Home</Link></BreadcrumbItem>
-                        <BreadcrumbItem>T-Shirts</BreadcrumbItem>
-                        <BreadcrumbItem active>{productInfo['name']}</BreadcrumbItem>
-                    </Breadcrumb>
-                    <ProductDetails productInfo={productInfo} />
-                </Container>
-            </Jumbotron>
+            <Breadcrumb>
+                <BreadcrumbItem><Link to="/ui/home">Home</Link></BreadcrumbItem>
+                <BreadcrumbItem>T-Shirts</BreadcrumbItem>
+                <BreadcrumbItem active>{productInfo['name']}</BreadcrumbItem>
+            </Breadcrumb>
+            <ProductDetails productInfo={productInfo} />
         </div>
     );
 }

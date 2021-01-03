@@ -19,6 +19,13 @@ export default function (state = initState, action) {
                 ...state,
                 items: newItems
             }
+
+        case 'CART_REMOVE_FROM_BAG':
+            return {
+                ...state,
+                items: [...state.items.filter(item => !(item['id'] === action.id && item['size'] === action.size && item['color'] === action.color))]
+            }
+
         default:
             return state
     }

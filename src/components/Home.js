@@ -19,15 +19,13 @@ function Home() {
     ]);
 
     return (
-        <Jumbotron>
-            <Container fluid>
-                <Breadcrumb>
-                    <BreadcrumbItem>Home</BreadcrumbItem>
-                    <BreadcrumbItem active>T-Shirts</BreadcrumbItem>
-                </Breadcrumb>
-                <Products products={products} />
-            </Container>
-        </Jumbotron>
+        <div>
+            <Breadcrumb>
+                <BreadcrumbItem>Home</BreadcrumbItem>
+                <BreadcrumbItem active>T-Shirts</BreadcrumbItem>
+            </Breadcrumb>
+            <Products products={products} />
+        </div>
     );
 }
 
